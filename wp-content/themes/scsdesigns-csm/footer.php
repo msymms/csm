@@ -7,11 +7,27 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package SCSDesigns_CSM
- */
+ *
+ * We need to test for the front page and if so, deliver the front page header
+ * otherwise, we need to deliver the regular content and footer
+ * 
+ * 
+ * 
+ * 
+ * 
+ *  */
 
 ?>
 
-	</div><!-- #content -->
+<?php
+
+if ( is_front_page() ) {
+
+   /* need to echo out the footer code for the front page and pull the function for the footer menu
+    * incorporate that into the code.
+    */
+}
+</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
@@ -27,7 +43,7 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+?>
 <?php wp_footer(); ?>
 
 </body>
