@@ -26,8 +26,8 @@ if ( is_front_page() ) {
    /* need to echo out the footer code for the front page and pull the function for the footer menu
     * incorporate that into the code.
     */
-}
-</div><!-- #content -->
+} ?>
+</div> <!-- #content -->
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
@@ -43,7 +43,6 @@ if ( is_front_page() ) {
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-?>
 <?php wp_footer(); ?>
 
 </body>

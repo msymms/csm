@@ -10,6 +10,12 @@
  */
 
 ?>
+
+<?php
+if ( is_front_page() && is_home() ) : 
+    return;
+endif; ?>
+    
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>

@@ -41,15 +41,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
---------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
-
-/*--------------------------------------------------------------
 # Parallax
 --------------------------------------------------------------*/
-@import "parallax/parallax";
 
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
 # Normalize
@@ -110,3 +106,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+/*--------------------------------------------------------------
+# Parallax
+--------------------------------------------------------------*/
+@import "parallax/parallax";
