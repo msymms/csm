@@ -1354,11 +1354,11 @@ body {
 }
 
 .footer-menu {
-	padding-left: .5rem;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
+	margin-left: 0;
 }
 
 .footer-menu-item a {
