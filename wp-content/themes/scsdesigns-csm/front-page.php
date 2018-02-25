@@ -14,17 +14,7 @@
 
 ?>
 
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Motivating Believers</title>
-    <meta name="description" content="Demonstration of grouping content in pure CSS parallax scrolling website">
-    <?php wp_head(); ?>
-</head>
-<body>
+<?php get_header( 'home' ); ?>
 
     <div class="debug">
         <label><input type="checkbox"> Debug</label>
@@ -107,7 +97,7 @@
             </footer>
             </div>
         </div>
-    </div>
+    </div><!-- parallax -->
     <script>
         var debugInput = document.querySelector("input");
 

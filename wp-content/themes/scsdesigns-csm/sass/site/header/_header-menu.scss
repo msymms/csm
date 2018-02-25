@@ -1,12 +1,14 @@
 .main-navigation {
 	display: block;
-	
+	background-color: #000;
 	font-family: $font__sans;
 	font-weight: 400;
 	clear: left;
 	
 	ul {
-		display: none;
+		/*display: none;*/
+                display: flex;
+                flex-direction: column;
 		list-style: none;
 		margin: 0;
 		padding-top: 1em;
@@ -74,7 +76,7 @@
 	}
 }
 
-button.dropdown-toggle {
+.dropdown-toggle {
 	position: absolute;
 	right: 0;
 	border: none;
@@ -87,14 +89,14 @@ button.dropdown-toggle {
 .menu-toggle {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	display: block;
-	margin: 1.2em 1.2em 0 0;
-	padding: .6em .8em;
+        height: 25px;
+	margin: 0;
+	padding: 0;
 	font-size: 80%;
 	text-transform: uppercase;
 	color: white;
-	border: 1px solid hsla(0, 0%, 100%, .3);
 }
 
 /* Toggle small menu and sub-menus on */

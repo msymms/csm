@@ -792,13 +792,21 @@ Header Menu
 */
 .main-navigation {
 	display: block;
+	background-color: #000;
 	font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-weight: 400;
 	clear: left;
 }
 
 .main-navigation ul {
-	display: none;
+	/*display: none;*/
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	list-style: none;
 	margin: 0;
 	padding-top: 1em;
@@ -860,7 +868,7 @@ Header Menu
 	padding-right: 2em;
 }
 
-button.dropdown-toggle {
+.dropdown-toggle {
 	position: absolute;
 	right: 0;
 	border: none;
@@ -873,14 +881,14 @@ button.dropdown-toggle {
 .menu-toggle {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	display: block;
-	margin: 1.2em 1.2em 0 0;
-	padding: .6em .8em;
+	height: 25px;
+	margin: 0;
+	padding: 0;
 	font-size: 80%;
 	text-transform: uppercase;
 	color: white;
-	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Toggle small menu and sub-menus on */
@@ -1160,13 +1168,13 @@ object {
   --------------------------------------------- */
 .debug {
 	position: fixed;
-	top: 0;
+	bottom: 0;
 	left: .5em;
 	z-index: 999;
 	background: rgba(0, 0, 0, 0.85);
 	color: #fff;
 	padding: .5em;
-	border-radius: 0 0 5px 5px;
+	border-radius: 5px 5px 0px 0px;
 }
 
 .debug-on .parallax__group {
