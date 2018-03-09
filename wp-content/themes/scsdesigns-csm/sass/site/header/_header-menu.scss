@@ -1,79 +1,18 @@
+
 .main-navigation {
-	display: block;
-	background-color: #000;
-	font-family: $font__sans;
-	font-weight: 400;
-	clear: left;
-	
-	ul {
-		/*display: none;*/
-                display: flex;
-                flex-direction: column;
-		list-style: none;
-		margin: 0;
-		padding-top: 1em;
-		padding-left: 0;
+   position: absolute;
+   z-index: 99;
+   display: flex;
+   flex-direction: column;
+}
 
-		ul {
-			display: none;
-			top: 1.5em;
-			z-index: 99999;
-
-			ul {
-				top: 0;
-			}
-
-			li {
-				padding-left: 1em;
-				
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		position: relative;
-	}
-
-	a {
-		display: inline-block;
-		width: 100%;
-		padding: .5em 1em .5em 0;
-		text-decoration: none;
-		color: #fff;
-	}
-	
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
-	
-	.menu-item-has-children,
-	.page-item-has-children {
-		min-width: 218px;
-	}
-	.menu-item-has-children > a,
-	.page_item_has_children > a {
-		padding-right: 2em;
-	}
+.navbar {
+    top: 0;
+    background-color: $color__menu-background;
+    min-height: 2em;
+    max-height: 2.8em;
+    width: 2.8em;
+    
 }
 
 .dropdown-toggle {
@@ -87,16 +26,34 @@
 }
 
 .menu-toggle {
-	position: absolute;
-	top: 0;
-	left: 0;
 	display: block;
-        height: 25px;
-	margin: 0;
-	padding: 0;
+        height: 30px;
+	margin: .5em;
+	padding:0;
 	font-size: 80%;
 	text-transform: uppercase;
 	color: white;
+}
+.menu-all-pages-container {
+    background-color: $color__menu-background;
+}
+
+.menu {
+    list-style: none;
+    margin: .5em;
+}
+
+.sub-menu {
+    list-style: none;
+    
+    a {
+        font-size: .8em;
+    }
+}
+
+.menu-item a {
+    color: $color__menu-text;
+    text-decoration: none;
 }
 
 /* Toggle small menu and sub-menus on */

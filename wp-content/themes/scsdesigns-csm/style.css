@@ -791,15 +791,8 @@ a:hover, a:active {
 Header Menu
 */
 .main-navigation {
-	display: block;
-	background-color: #000;
-	font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	font-weight: 400;
-	clear: left;
-}
-
-.main-navigation ul {
-	/*display: none;*/
+	position: absolute;
+	z-index: 99;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -807,65 +800,14 @@ Header Menu
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-	list-style: none;
-	margin: 0;
-	padding-top: 1em;
-	padding-left: 0;
 }
 
-.main-navigation ul ul {
-	display: none;
-	top: 1.5em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
+.navbar {
 	top: 0;
-}
-
-.main-navigation ul ul li {
-	padding-left: 1em;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	position: relative;
-}
-
-.main-navigation a {
-	display: inline-block;
-	width: 100%;
-	padding: .5em 1em .5em 0;
-	text-decoration: none;
-	color: #fff;
-}
-
-.main-navigation a:hover,
-.main-navigation a:focus {
-	text-decoration: underline;
-}
-
-.main-navigation .menu-item-has-children,
-.main-navigation .page-item-has-children {
-	min-width: 218px;
-}
-
-.main-navigation .menu-item-has-children > a,
-.main-navigation .page_item_has_children > a {
-	padding-right: 2em;
+	background-color: #000;
+	min-height: 2em;
+	max-height: 2.8em;
+	width: 2.8em;
 }
 
 .dropdown-toggle {
@@ -879,16 +821,35 @@ Header Menu
 }
 
 .menu-toggle {
-	position: absolute;
-	top: 0;
-	left: 0;
 	display: block;
-	height: 25px;
-	margin: 0;
+	height: 30px;
+	margin: .5em;
 	padding: 0;
 	font-size: 80%;
 	text-transform: uppercase;
 	color: white;
+}
+
+.menu-all-pages-container {
+	background-color: #000;
+}
+
+.menu {
+	list-style: none;
+	margin: .5em;
+}
+
+.sub-menu {
+	list-style: none;
+}
+
+.sub-menu a {
+	font-size: .8em;
+}
+
+.menu-item a {
+	color: #fff;
+	text-decoration: none;
 }
 
 /* Toggle small menu and sub-menus on */

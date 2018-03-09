@@ -18,8 +18,10 @@
 
 <body <?php body_class(); ?>>
     <nav id="site-navigation" class="main-navigation">
-        <input type="image" src="/wp-includes/images/navicon_white.png" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+        <div class="navbar">
+            <input type="image" src="/wp-includes/images/navicon_white.png" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
         </input>
+               </div>
         <?php
             wp_nav_menu( array(
                     'theme_location' => 'menu-1',
