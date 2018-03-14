@@ -42,6 +42,10 @@ if ( ! function_exists( 'scsdesigns_csm_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+        	//add_image_size( 'scsdesigns_csm-featured-image', 2000, 1200, true );
+
+               // add_image_size( 'scsdesigns_csm-thumbnail-avatar', 100, 100, true );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'scsdesigns-csm' ),
@@ -119,15 +123,96 @@ add_action( 'widgets_init', 'scsdesigns_csm_widgets_init' );
 function scsdesigns_csm_scripts() {
 	wp_enqueue_style( 'scsdesigns-csm-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'scsdesigns-csm-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'scsdesigns-csm-navigation', get_template_directory_uri() . '/js/navigation.js', array(), false, true );
 
 	wp_enqueue_script( 'scsdesigns-csm-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
+        
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'scsdesigns_csm_scripts' );
+
+/**
+ * 
+ * @param int $id
+ * @return array
+ * 
+ * This function adds functionality to retrieve the image srcset for 
+ * non managed pages.  MS 03.18.2018
+ * 
+ */
+
+function csm_get_image_attr( $id ){
+   
+    // Returns the image source, the image source set, the image sizes
+    //  and the image metadata. MS - 0.3.13.2018
+    
+    return $image_attr = array( wp_get_attachment_image_src( $id, 'full' ), 
+                                wp_get_attachment_image_srcset( $id, 'full' ),
+                                wp_get_attachment_image_sizes( $id, 'full' ),
+                                get_post_meta( $id, '_wp_attachment_image_alt', 
+                                true) );
+    
+}
+
+add_filter( 'wp_get_attachment_image_srcset', 'csm_get_image_attr', 10, 1 );
+
+
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for content images.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param string $sizes A source size value for use in a 'sizes' attribute.
+ * @param array  $size  Image size. Accepts an array of width and height
+ *                      values in pixels (in that order).
+ * @return string A source size value for use in a content image 'sizes' attribute.
+ * 
+ * MS - Added 03.12.2018
+ */
+function csm_content_image_sizes_attr( $sizes, $size ) {
+	$width = $size[0];
+
+	if ( 740 <= $width ) {
+		$sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
+	}
+
+	if ( is_active_sidebar( 'sidebar-1' ) || is_archive() || is_search() || is_home() || is_page() ) {
+		if ( ! ( is_page() && 'one-column' === get_theme_mod( 'page_options' ) ) && 767 <= $width ) {
+			 $sizes = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
+		}
+	}
+
+	return $sizes;
+}
+add_filter( 'wp_calculate_image_sizes', 'csm_image_sizes_attr', 10, 2 );
+
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for post thumbnails.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array $attr       Attributes for the image markup.
+ * @param int   $attachment Image attachment ID.
+ * @param array $size       Registered image size or flat array of height and width dimensions.
+ * @return array The filtered attributes for the image markup.
+ * 
+ * MS - Added 03.12.2018
+ */
+function csm_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
+	if ( is_archive() || is_search() || is_home() ) {
+		$attr['sizes'] = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
+	} else {
+		$attr['sizes'] = '100vw';
+	}
+
+	return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'csm_post_thumbnail_sizes_attr', 10, 3 );
+
 
 /**
  * Implement the Custom Header feature.

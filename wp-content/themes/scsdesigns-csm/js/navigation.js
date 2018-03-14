@@ -9,19 +9,24 @@
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
-		return;
+                return;
 	}
-
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
-		return;
+        
+	hamburger = container.getElementsByTagName( 'input' )[0];
+	if ( ! hamburger ) {
+                return;
 	}
-
+    
+        menuContainer = document.getElementById( 'menu-container' );
+        if ( ! menuContainer ) {
+                return;
+        }
+        
 	menu = container.getElementsByTagName( 'ul' )[0];
 
 	// Hide menu toggle button if menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
+		hamburger.style.display = 'none';
 		return;
 	}
 
@@ -30,14 +35,14 @@
 		menu.className += ' nav-menu';
 	}
 
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
+	hamburger.onclick = function() {
+		if ( -1 !== menuContainer.className.indexOf( 'toggled' ) ) {
+			menuContainer.className = menuContainer.className.replace( 'toggled', '' );
+			hamburger.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
 		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
+			menuContainer.className += ' toggled';
+			hamburger.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
 	};

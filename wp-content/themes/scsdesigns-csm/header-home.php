@@ -19,13 +19,14 @@
 <body <?php body_class(); ?>>
     <nav id="site-navigation" class="main-navigation">
         <div class="navbar">
-            <input type="image" src="/wp-includes/images/navicon_white.png" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-        </input>
-               </div>
+            <input id="hamburger" type="image" src="/wp-includes/images/navicon_white.png" class="menu-button" aria-controls="primary-menu" aria-expanded="false">
+            </input>
+        </div>
         <?php
             wp_nav_menu( array(
                     'theme_location' => 'menu-1',
                     'menu_id'        => 'primary-menu',
+                    'container_id'    => 'menu-container'
             ) );
         ?>
     </nav><!-- #site-navigation -->

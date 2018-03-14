@@ -22,7 +22,14 @@
     <div class="parallax">
         <div id="group1" class="parallax__group">
             <div class="parallax__layer parallax__layer--base">
-                <div class="title"><img src="http://via.placeholder.com/3000X2000" class="back-image" alt=""></div>
+                <div class="title">
+                    <?php $image_attr = csm_get_image_attr( 1748 ); ?> 
+                    <img src="<?php echo $image_attr[0]; ?>" 
+                         srcset="<<?php echo $image_attr[1]; ?>"
+                         sizes="<?php echo $image_attr[2]; ?>"
+                         alt="<?php echo $image_attr[3]; ?>"
+                         class="back-image" />
+                </div>
                 <div class="welcome-title">
                     <p class="welcome-title-line-one">Preach the Gospel.</p>
                     <p class="welcome-title-line-two">Change the World.</p>
@@ -72,60 +79,6 @@
                 <div class="title">Base Layer</div>
             </div>
         </div>
-        <div class="footer__group">
-           <div class="parallax__layer parallax__layer--base">
- <!--  MOVE INTO FOOTER.PHP ---->
-            <footer class="footer">
-                <div class="custom-logo">
-                    <img src="http://via.placeholder.com/50x50" alt="">
-                </div>
-                <div class="footer-navigation">
-                    <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="#">Home</a></li>
-                        <li class="footer-menu-item"><a href="#">Blog</a></li>
-                        <li class="footer-menu-item"><a href="#">Podcasts</a></li>
-                        <li class="footer-menu-item"><a href="#">About</a>
-                            <ul class="child-menu">
-                                <li class="child-menu-item"><a href="#">Bio</a></li>
-                                <li class="child-menu-item"><a href="#">Statement of Faith</a></li>
-                                <li class="child-menu-item"><a href="#">Contact</a></li>
-                            </ul>
-                        </li>
-                        <li class="footer-menu-item"><a href="#">Schedule</a></li>
-                    </ul>
-                </div>
-            </footer>
-            </div>
-        </div>
-    </div><!-- parallax -->
-    <script>
-        var debugInput = document.querySelector("input");
-
-        function updateDebugState() {
-            document.body.classList.toggle('debug-on', debugInput.checked);
-        }
-        debugInput.addEventListener("click", updateDebugState);
-        updateDebugState();
-    </script>
-
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-10812217-1', 'auto');
-        ga('send', 'pageview');
-    </script>
     
-    <!-- MOVE TO FOOTER.PHP -------------->
-
-</body>
-
-</html>
+<?php
+get_footer( 'home' );

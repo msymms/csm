@@ -479,7 +479,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+	border-color: #fff;
 	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -791,7 +791,7 @@ a:hover, a:active {
 Header Menu
 */
 .main-navigation {
-	position: absolute;
+	position: fixed;
 	z-index: 99;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -820,7 +820,7 @@ Header Menu
 	padding: .4em 1em .4em .5em;
 }
 
-.menu-toggle {
+.menu-button {
 	display: block;
 	height: 30px;
 	margin: .5em;
@@ -830,8 +830,15 @@ Header Menu
 	color: white;
 }
 
+.menu-button:focus {
+	outline: #fff thin dotted;
+}
+
 .menu-all-pages-container {
 	background-color: #000;
+	position: relative;
+	left: -5.3em;
+	transition-duration: .5s;
 }
 
 .menu {
@@ -853,9 +860,10 @@ Header Menu
 }
 
 /* Toggle small menu and sub-menus on */
-.toggled-on ul,
-.sub-menu.toggled-on {
-	display: block;
+.toggled,
+.sub-menu.toggled {
+	left: 0;
+	transition-duration: .5s;
 }
 
 @media screen and (min-width: 600px) {
