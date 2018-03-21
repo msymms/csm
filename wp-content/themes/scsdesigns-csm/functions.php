@@ -139,7 +139,7 @@ add_action( 'wp_enqueue_scripts', 'scsdesigns_csm_scripts' );
  * @return array
  * 
  * This function adds functionality to retrieve the image srcset for 
- * non managed pages.  MS 03.18.2018
+ * non managed pages.  MS 03.13.2018
  * 
  */
 
@@ -149,8 +149,8 @@ function csm_get_image_attr( $id ){
     //  and the image metadata. MS - 0.3.13.2018
     
     return $image_attr = array( wp_get_attachment_image_src( $id, 'full' ), 
-                                wp_get_attachment_image_srcset( $id, 'full' ),
-                                wp_get_attachment_image_sizes( $id, 'full' ),
+                                wp_get_attachment_image_srcset( $id, 'large' ),
+                                wp_get_attachment_image_sizes( $id ),
                                 get_post_meta( $id, '_wp_attachment_image_alt', 
                                 true) );
     

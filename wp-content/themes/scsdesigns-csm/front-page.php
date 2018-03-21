@@ -22,12 +22,12 @@
     <div class="parallax">
         <div id="group1" class="parallax__group">
             <div class="parallax__layer parallax__layer--base">
-                <div class="title">
-                    <?php $image_attr = csm_get_image_attr( 1748 ); ?> 
-                    <img src="<?php echo $image_attr[0]; ?>" 
-                         srcset="<<?php echo $image_attr[1]; ?>"
-                         sizes="<?php echo $image_attr[2]; ?>"
-                         alt="<?php echo $image_attr[3]; ?>"
+                <div class="parallax_image">
+                    <?php $image_attr_gr1 = csm_get_image_attr( 1762 ); ?> 
+                    <img src="<?php echo $image_attr_gr1[0][0]; ?>" 
+                         srcset="<<?php echo $image_attr_gr1[1]; ?>"
+                         sizes=""
+                         alt="<?php echo $image_attr_gr1[3]; ?>"
                          class="back-image" />
                 </div>
                 <div class="welcome-title">
@@ -38,45 +38,54 @@
         </div>
         <div id="group2" class="parallax__group">
             <div class="parallax__layer parallax__layer--base">
-                <div class="title">Base Layer</div>
+                <div class="welcome-title">Clever tag line</div>
             </div>
             <div class="parallax__layer parallax__layer--back">
-                <div class="title">Background Layer</div>
+                <div class="parallax_image">
+                    <?php $image_attr_gr2 = csm_get_image_attr( 1746 ); ?> 
+                    <img src="<?php echo $image_attr_gr2[0][0]; ?>" 
+                         srcset="<<?php echo $image_attr_gr2[1]; ?>"
+                         sizes="<?php echo $image_attr_gr2[2]; ?>"
+                         alt="<?php echo $image_attr_gr2[3]; ?>"
+                         class="back-image" />
+                </div>
             </div>
         </div>
         <div id="group3" class="parallax__group">
-            <div class="parallax__layer parallax__layer--fore">
-                <div class="title">Foreground Layer</div>
-            </div>
+<!--            <div class="parallax__layer parallax__layer--fore">
+                <div class="parallax_image">Foreground Layer</div>
+            </div>-->
             <div class="parallax__layer parallax__layer--base">
-                <div class="title">Base Layer</div>
+                <div class="front__menu-images">
+                
+                </div>
             </div>
         </div>
         <div id="group4" class="parallax__group">
             <div class="parallax__layer parallax__layer--base">
-                <div class="title">Base Layer</div>
+                <div class="parallax_image">Base Layer</div>
             </div>
             <div class="parallax__layer parallax__layer--back">
-                <div class="title">Background Layer</div>
+                <div class="parallax_image">Background Layer</div>
             </div>
             <div class="parallax__layer parallax__layer--deep">
-                <div class="title">Deep Background Layer</div>
+                <div class="parallax_image">Deep Background Layer</div>
             </div>
         </div>
         <div id="group5" class="parallax__group">
             <div class="parallax__layer parallax__layer--fore">
-                <div class="title">Foreground Layer</div>
+                <div class="parallax_image">Foreground Layer</div>
             </div>
             <div class="parallax__layer parallax__layer--base">
-                <div class="title">Base Layer</div>
+                <div class="parallax_image">Base Layer</div>
             </div>
         </div>
         <div id="group6" class="parallax__group">
             <div class="parallax__layer parallax__layer--back">
-                <div class="title">Background Layer</div>
+                <div class="parallax_image">Background Layer</div>
             </div>
             <div class="parallax__layer parallax__layer--base">
-                <div class="title">Base Layer</div>
+                <div class="parallax_image">Base Layer</div>
             </div>
         </div>
     

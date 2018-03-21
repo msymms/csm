@@ -675,16 +675,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global layouts
 --------------------------------------------------------------*/
-.site-content {
-	padding: 1em;
-}
-
-@media screen and (min-width: 600px) {
-	.site-content {
-		padding: 2em;
-	}
-}
-
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
@@ -1188,7 +1178,7 @@ body {
 }
 
 /* centre the content in the parallax layers */
-.title {
+.parallax_image {
 	text-align: center;
 	position: absolute;
 	left: 50%;
@@ -1201,7 +1191,7 @@ body {
 	width: 100%;
 	position: absolute;
 	left: 50%;
-	top: 70%;
+	top: 65%;
 	font-family: serif;
 	font-style: italic;
 	font-weight: 700;
@@ -1219,7 +1209,7 @@ body {
 }
 
 .back-image {
-	height: 105vh;
+	height: 103vh;
 }
 
 /* style the groups
