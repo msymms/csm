@@ -101,17 +101,18 @@
       overflow: hidden;
   }
 
-  body {
-      font: 100% / 1.5 Arial;
-  }
-
   * {
       margin: 0;
       padding: 0;
   }
 
   .parallax {
-      font-size: 200%;
+     font-size: 2em;
+     font-family: serif;
+     font-style: italic;
+     font-weight: 700;
+     color: $color__front_page-text;
+     
   }
 
   /* centre the content in the parallax layers */
@@ -130,10 +131,6 @@
       position: absolute;
       left: 50%;
       top: 65%;
-      font-family: serif;
-      font-style: italic;
-      font-weight: 700;
-      color: #fff;
       -webkit-transform: translate(-40%, -50%);
       transform: translate(-40%, -50%);
   }
@@ -148,6 +145,34 @@
 
   .back-image {
       height: 103vh;
+  }
+  
+  .menu_group {
+      position: relative;
+      height: 100vh;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+  }
+  
+  .front__menu-images {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+  }
+  
+ 
+   .front__menu-images a {
+       color: $color__menu-text;
+        
+        &:hover,
+        &:focus{
+         color: $color__front_page-hover;
+        }
+  }
+  
+   .front__menu-image {
+     width: 100%;
+     padding-top: 1em;
   }
 
   /* style the groups
@@ -177,7 +202,7 @@
   }
 
   #group3 .parallax__layer--base {
-      background: rgb(153, 216, 101);
+      background: $color__background-body;
   }
 
   #group4 {
@@ -191,6 +216,7 @@
 
   #group5 {
       z-index: 3;
+      
       /* slide over group 4 and 6 */
   }
 
@@ -235,15 +261,14 @@
 
   .footer__group {
       position: relative;
-      height: 25vh;
-      background-color: #a5a5af;
+      height: 20vh;
+      background-color: $color__footer-background;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
       z-index: 3;
   }
 
   .footer {
-      
       display: flex;
       justify-content: space-between;
       padding-bottom: 1em;
@@ -252,7 +277,7 @@
   .custom-logo {
       padding: .25em;
       display: block;
-      max-height: 25vh;
+      max-height: 15vh;
   }
 
   .footer-navigation {
@@ -267,15 +292,16 @@
 
   .footer-menu-item a {
       padding-right: .25rem;
-      color: #000;
+      color: $color__footer-menu-text;
       text-decoration: none;
       font-size: .75rem;
       font-weight: 700;
       font-family: sans-serif;
+      font-style: normal;
       
       &:hover,
       &:focus{
-      color: #fff;    
+      color: $color__footer-menu-hover;    
       }
         
   }
@@ -288,14 +314,14 @@
   }
 
   .child-menu-item a {
-      color: #000;
+      color: $color__footer-menu-text;
       text-decoration: none;
       font-size: .5em;
       padding: 0;
       
       &:hover, 
       &:focus{
-          color: #fff;
+          color: $color__footer-menu-hover;
       }
   }
 

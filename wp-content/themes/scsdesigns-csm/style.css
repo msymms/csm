@@ -383,7 +383,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #a5a5af;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -1164,17 +1164,17 @@ html {
 	overflow: hidden;
 }
 
-body {
-	font: 100% / 1.5 Arial;
-}
-
 * {
 	margin: 0;
 	padding: 0;
 }
 
 .parallax {
-	font-size: 200%;
+	font-size: 2em;
+	font-family: serif;
+	font-style: italic;
+	font-weight: 700;
+	color: #fff;
 }
 
 /* centre the content in the parallax layers */
@@ -1192,10 +1192,6 @@ body {
 	position: absolute;
 	left: 50%;
 	top: 65%;
-	font-family: serif;
-	font-style: italic;
-	font-weight: 700;
-	color: #fff;
 	-webkit-transform: translate(-40%, -50%);
 	transform: translate(-40%, -50%);
 }
@@ -1210,6 +1206,37 @@ body {
 
 .back-image {
 	height: 103vh;
+}
+
+.menu_group {
+	position: relative;
+	height: 100vh;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.front__menu-images {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	overflow: hidden;
+}
+
+.front__menu-images a {
+	color: #fff;
+}
+
+.front__menu-images a:hover, .front__menu-images a:focus {
+	color: purple;
+}
+
+.front__menu-image {
+	width: 100%;
+	padding-top: 1em;
 }
 
 /* style the groups
@@ -1238,7 +1265,7 @@ body {
 }
 
 #group3 .parallax__layer--base {
-	background: #99d865;
+	background: #a5a5af;
 }
 
 #group4 {
@@ -1293,7 +1320,7 @@ body {
 ---------------------------------------------*/
 .footer__group {
 	position: relative;
-	height: 25vh;
+	height: 20vh;
 	background-color: #a5a5af;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -1313,7 +1340,7 @@ body {
 .custom-logo {
 	padding: .25em;
 	display: block;
-	max-height: 25vh;
+	max-height: 15vh;
 }
 
 .footer-navigation {
@@ -1335,6 +1362,7 @@ body {
 	font-size: .75rem;
 	font-weight: 700;
 	font-family: sans-serif;
+	font-style: normal;
 }
 
 .footer-menu-item a:hover, .footer-menu-item a:focus {
