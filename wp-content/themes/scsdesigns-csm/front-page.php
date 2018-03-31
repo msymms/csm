@@ -53,7 +53,8 @@
 <!--            <div class="parallax__layer parallax__layer--fore">
                 <div class="parallax_image">Foreground Layer</div>
             </div>-->
-            <div class="parallax__layer parallax__layer--base front__menu-images">
+            <div class="parallax__layer parallax__layer--base">
+                <div class="front__menu-images">
                     <a href="archive.php"> 
                         <?php $image_attr_gr3 = csm_get_image_attr( 1765 ); ?> 
                         <img type="image"
@@ -76,6 +77,7 @@
                              alt="<?php echo $image_attr_gr3b[3]; ?>"
                              class="front__menu-image"/>
                      </a>
+                    </div>
             </div>
         </div>
 <!--       <div id="group4" class="parallax__group">

@@ -2,3 +2,7 @@
 .site-content{
     
 }
+
+.center {
+ @include center-block;   
+}

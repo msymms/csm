@@ -157,22 +157,17 @@
   .front__menu-images {
       display: flex;
       flex-direction: column;
-      overflow: hidden;
+      
   }
-  
  
-   .front__menu-images a {
-       color: $color__menu-text;
-        
-        &:hover,
-        &:focus{
-         color: $color__front_page-hover;
-        }
+  .front__menu-images a {
+     display: block;
+     margin: auto;      
   }
   
    .front__menu-image {
-     width: 100%;
-     padding-top: 1em;
+     max-height: 30vh;
+     padding-top: .25em;
   }
 
   /* style the groups

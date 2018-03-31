@@ -277,7 +277,6 @@ textarea {
 	font-family: "Merriweather", Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: 18px;
 	font-size: 1.125rem;
-	line-height: 1.5;
 }
 
 @media screen and (min-width: 700px) {
@@ -675,6 +674,12 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global layouts
 --------------------------------------------------------------*/
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
@@ -1223,20 +1228,16 @@ html {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-	overflow: hidden;
 }
 
 .front__menu-images a {
-	color: #fff;
-}
-
-.front__menu-images a:hover, .front__menu-images a:focus {
-	color: purple;
+	display: block;
+	margin: auto;
 }
 
 .front__menu-image {
-	width: 100%;
-	padding-top: 1em;
+	max-height: 30vh;
+	padding-top: .25em;
 }
 
 /* style the groups
