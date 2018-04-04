@@ -1,89 +1,78 @@
 
 .header-image{
-    max-height: 60vh;
-    overflow: hidden;
-    img {
-        display: block;
-        width: 100vw;
-    }
-  
+
 }
 
 .site-header {
-	position: relative;
-	padding: 1em;
-	font-family: $font__sans;
-	color: #fff;
-	background-color: $color__skin;
-	
-	@media screen and (min-width: $query__small) {
-		padding: 1em 2em;
-	}
+    position: relative;
+    padding: 0 1em .5em 1em;
+    font-family: $font__serif;
+    color: $color__menu-text;
+    background-color: $color__skin;
+    height: 5em;
 }
 
 .site-branding {
-	min-height: 65px;
-        display: flex;
+    min-height: 65px;
+    display: flex;
 }
 
 .site-branding-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 65px;
-    
 }
 
 
 .custom-logo-link{
-    
-    margin-right: 1em;
-    img{
-        display: block;
-        height: 65px;
-        width: auto;
-    }
+
 }
 
 
 
 .site-title {
-	margin: 0;
-	padding: 0;
-	font-size: 1.6em;
-	font-weight: 900;
-	line-height: 1em;
-	
-	a {
-		color: white;
-		text-decoration: none;
-		
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-	}
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 1.5em;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover,
+            &:focus {
+            text-decoration: underline;
+        }
+    }
 }
 
 .site-description {
-	margin: 0;
-	font-size: .9em;
-	font-style: italic;
-	font-weight: 100;
+    margin: 0;
+    font-size: .9em;
+    font-style: italic;
+    font-weight: 100;
+    padding-left: 2em;
+}
+
+.lower-site-header {
+    display: flex;
 }
 
 @media screen and (min-width: $query__medium){
     .site-header{
         display: flex;
         justify-content: space-between;
-        
+
     }
-    
+
     .site-branding{
         width: 35%;
         flex: 1 0 auto;
     }
-    
+
     .main-navigation{
         width: 55%;
     }

@@ -42,6 +42,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 # Parallax
 --------------------------------------------------------------*/
+/* $color__menu-background: #002254; */
+/* Home Page Color */
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -683,28 +685,13 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
-.header-image {
-	max-height: 60vh;
-	overflow: hidden;
-}
-
-.header-image img {
-	display: block;
-	width: 100vw;
-}
-
 .site-header {
 	position: relative;
-	padding: 1em;
-	font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	padding: 0 1em .5em 1em;
+	font-family: "Merriweather", Georgia, Cambria, "Times New Roman", Times, serif;
 	color: #fff;
 	background-color: #002254;
-}
-
-@media screen and (min-width: 600px) {
-	.site-header {
-		padding: 1em 2em;
-	}
+	height: 5em;
 }
 
 .site-branding {
@@ -725,25 +712,15 @@ a:hover, a:active {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	height: 65px;
-}
-
-.custom-logo-link {
-	margin-right: 1em;
-}
-
-.custom-logo-link img {
-	display: block;
-	height: 65px;
-	width: auto;
 }
 
 .site-title {
 	margin: 0;
 	padding: 0;
-	font-size: 1.6em;
+	font-size: 1.3em;
+	font-style: italic;
 	font-weight: 900;
-	line-height: 1em;
+	line-height: 1.5em;
 }
 
 .site-title a {
@@ -760,6 +737,13 @@ a:hover, a:active {
 	font-size: .9em;
 	font-style: italic;
 	font-weight: 100;
+	padding-left: 2em;
+}
+
+.lower-site-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 @media screen and (min-width: 900px) {
@@ -787,7 +771,6 @@ Header Menu
 */
 .main-navigation {
 	position: fixed;
-	z-index: 99;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -795,14 +778,16 @@ Header Menu
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	left: -.1em;
+	top: calc(4em - 21px);
 }
 
 .navbar {
 	top: 0;
-	background-color: #000;
+	background-color: #002254;
 	min-height: 2em;
 	max-height: 2.8em;
-	width: 2.8em;
+	width: 2.3em;
 }
 
 .dropdown-toggle {
@@ -817,12 +802,10 @@ Header Menu
 
 .menu-button {
 	display: block;
-	height: 30px;
+	height: 25px;
 	margin: .5em;
 	padding: 0;
 	font-size: 80%;
-	text-transform: uppercase;
-	color: white;
 }
 
 .menu-button:focus {
@@ -830,7 +813,7 @@ Header Menu
 }
 
 .menu-all-pages-container {
-	background-color: #000;
+	background-color: #002254;
 	position: relative;
 	left: -5.3em;
 	transition-duration: .5s;
@@ -861,6 +844,46 @@ Header Menu
 	transition-duration: .5s;
 }
 
+/*
+ *  Classes for the home / front page
+ *
+ *
+*/
+.home-menu-button {
+	display: block;
+	height: 30px;
+	margin: .5em;
+	padding: 0;
+	font-size: 80%;
+	text-transform: uppercase;
+	color: white;
+}
+
+.home-menu-button:focus {
+	outline: #fff thin dotted;
+}
+
+.home-navbar {
+	top: 0;
+	background-color: #000;
+	min-height: 2em;
+	max-height: 2.8em;
+	width: 2.8em;
+}
+
+.home-navigation {
+	position: fixed;
+	z-index: 99;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+/*  END Home Page Classes  */
 @media screen and (min-width: 600px) {
 	.menu-toggle {
 		display: none;

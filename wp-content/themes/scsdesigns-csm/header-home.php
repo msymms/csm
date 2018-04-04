@@ -17,9 +17,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <nav id="site-navigation" class="main-navigation">
+    <nav id="site-navigation" class="home-navigation">
         <div class="navbar">
-            <input id="hamburger" type="image" src="/wp-includes/images/navicon_white.png" class="menu-button" aria-controls="primary-menu" aria-expanded="false">
+            <input id="hamburger" type="image" src="/wp-includes/images/navicon_white.png" class="home-menu-button" aria-controls="primary-menu" aria-expanded="false">
             </input>
         </div>
         <?php
