@@ -7,7 +7,7 @@ textarea {
 	font-family: $font__serif;
 	@include font-size(.9);
         
-        @media screen and (min-width: 700px) {
+        @media screen and (min-width: 600px) {
             @include font-size(1);
         }
 }
@@ -15,15 +15,15 @@ textarea {
 @import "headings";
 
 h1 {
-    font-size: 3em;
+    font-size: 3.15em;
 }
 
 h2 {
-    font-size: 2.6em;
+    font-size: 2.36em;
 }
 
 h3 {
-    font-size: 2.2em;
+    font-size: 2.1em;
 }
 
 h4 {
@@ -31,11 +31,11 @@ h4 {
 }
 
 h5 {
-    font-size: 1.8em;
+    font-size: 1.7em;
 }
 
 h6 {
-    font-size: 1.6em;
+    font-size: 1.33em;
 }
 
 @import "copy";

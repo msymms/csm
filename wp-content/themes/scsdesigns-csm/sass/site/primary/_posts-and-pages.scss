@@ -6,11 +6,11 @@
 	margin: 0 0 1.5em;
 }
 
-.byline,
 .updated:not(.published){
 	display: none;
 }
 
+.byline,
 .single .byline,
 .group-blog .byline {
 	display: inline;

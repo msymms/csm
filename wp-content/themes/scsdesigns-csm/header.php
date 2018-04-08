@@ -43,20 +43,18 @@
                     <?php endif;
                     ?>
                 </div><!-- .site-branding -->
-                <nav id="site-navigation" class="main-navigation">
-                    <div class="navbar">
-                        <input id="hamburger" type="image" src="/wp-includes/images/navicon_white.png" class="menu-button" aria-controls="primary-menu" aria-expanded="false">
-                        </input>
-                    </div>
-                    <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'menu-1',
-                        'menu_id' => 'primary-menu',
-                        'container_id' => 'menu-container'
-                    ));
-                    ?>
-                </nav><!-- #site-navigation -->
-
             </header><!-- #masthead -->
-
+            <nav id="site-navigation" class="main-navigation">
+                <div class="navbar">
+                    <input id="hamburger" type="image" src="/wp-includes/images/navicon_white.png" class="menu-button" aria-controls="primary-menu" aria-expanded="false">
+                    </input>
+                </div>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'menu-1',
+                    'menu_id' => 'primary-menu',
+                    'container_id' => 'menu-container'
+                ));
+                ?>
+            </nav><!-- #site-navigation -->
             <div id="content" class="site-content">

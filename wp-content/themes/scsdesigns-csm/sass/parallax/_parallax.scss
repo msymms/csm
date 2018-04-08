@@ -58,52 +58,11 @@
   }
 
 
-  /* Debugger styles - used to show the effect
-  --------------------------------------------- */
-
-  .debug {
-      position: fixed;
-      bottom: 0;
-      left: .5em;
-      z-index: 999;
-      background: rgba(0, 0, 0, .85);
-      color: #fff;
-      padding: .5em;
-      border-radius: 5px 5px 0px 0px;
-  }
-
-  .debug-on .parallax__group {
-      -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
-      transform: translate3d(700px, 0, -800px) rotateY(30deg);
-  }
-
-  .debug-on .footer__group {
-      -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
-      transform: translate3d(700px, 0, -800px) rotateY(30deg);
-  }
-
-  .debug-on .parallax__layer {
-      box-shadow: 0 0 0 2px #000;
-      opacity: 0.9;
-  }
+  
 
   .parallax__group {
       -webkit-transition: -webkit-transform 0.5s;
       transition: transform 0.75s;
-  }
-
-
-  /* demo styles
-  --------------------------------------------- */
-
-  body,
-  html {
-      overflow: hidden;
-  }
-
-  * {
-      margin: 0;
-      padding: 0;
   }
 
   .parallax {

@@ -43,3 +43,31 @@ mark, ins {
 big {
 	font-size: 125%;
 }
+
+.entry-title {
+    color: $color__post-title;    
+}
+
+.entry-title  a {
+    text-decoration: none;
+    
+}
+
+.post {
+    padding: 0 .5em;
+}
+
+.sticky {
+    background-color: #f2d7ac;
+}
+
+.post-thumbnail {
+    width: 100%;
+    display: flex;
+    flex: 0 1 auto;
+}
+
+.wp-post-image {
+    width: 90vw;
+    margin: .5em auto 0 auto;
+}

@@ -1,6 +1,6 @@
-$color__skin: #002254; //Header etc
+$color__skin: #4c2115; //Header etc
 
-$color__background-body: #a5a5af;
+$color__background-body: #ecf4ff; /* MS 04.08.18 */
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
@@ -14,6 +14,9 @@ $color__link: royalblue;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
 $color__text-main: #404040;
+
+/* Post Specific Colors */
+$color__post-title: #776477;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

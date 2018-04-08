@@ -1,8 +1,12 @@
 
 .site-content{
-    
+    background-color: $color__background-body;
 }
 
+* {
+      margin: 0;
+      padding: 0;
+  }
 .center {
  @include center-block;   
 }

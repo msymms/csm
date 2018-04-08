@@ -42,6 +42,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 # Parallax
 --------------------------------------------------------------*/
+/* MS 04.08.18 */
+/* Post Specific Colors */
 /* $color__menu-background: #002254; */
 /* Home Page Color */
 /*
@@ -281,7 +283,7 @@ textarea {
 	font-size: 1.125rem;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
 	body,
 	button,
 	input,
@@ -298,15 +300,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 3.15em;
 }
 
 h2 {
-	font-size: 2.6em;
+	font-size: 2.36em;
 }
 
 h3 {
-	font-size: 2.2em;
+	font-size: 2.1em;
 }
 
 h4 {
@@ -314,11 +316,11 @@ h4 {
 }
 
 h5 {
-	font-size: 1.8em;
+	font-size: 1.7em;
 }
 
 h6 {
-	font-size: 1.6em;
+	font-size: 1.33em;
 }
 
 p {
@@ -369,6 +371,37 @@ big {
 	font-size: 125%;
 }
 
+.entry-title {
+	color: #776477;
+}
+
+.entry-title a {
+	text-decoration: none;
+}
+
+.post {
+	padding: 0 .5em;
+}
+
+.sticky {
+	background-color: #f2d7ac;
+}
+
+.post-thumbnail {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 auto;
+	        flex: 0 1 auto;
+}
+
+.wp-post-image {
+	width: 90vw;
+	margin: .5em auto 0 auto;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -384,7 +417,7 @@ html {
 }
 
 body {
-	background: #a5a5af;
+	background: #ecf4ff;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -676,6 +709,15 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global layouts
 --------------------------------------------------------------*/
+.site-content {
+	background-color: #ecf4ff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
 .center {
 	display: block;
 	margin-left: auto;
@@ -690,7 +732,7 @@ a:hover, a:active {
 	padding: 0 1em .5em 1em;
 	font-family: "Merriweather", Georgia, Cambria, "Times New Roman", Times, serif;
 	color: #fff;
-	background-color: #002254;
+	background-color: #4c2115;
 	height: 5em;
 }
 
@@ -771,6 +813,7 @@ Header Menu
 */
 .main-navigation {
 	position: fixed;
+	z-index: 99;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -779,15 +822,18 @@ Header Menu
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 	left: -.1em;
-	top: calc(4em - 21px);
+	top: 2em;
 }
 
 .navbar {
-	top: 0;
-	background-color: #002254;
+	background-color: #4c2115;
 	min-height: 2em;
 	max-height: 2.8em;
 	width: 2.3em;
+}
+
+.fixed {
+	top: 0;
 }
 
 .dropdown-toggle {
@@ -813,7 +859,7 @@ Header Menu
 }
 
 .menu-all-pages-container {
-	background-color: #002254;
+	background-color: #4c2115;
 	position: relative;
 	left: -5.3em;
 	transition-duration: .5s;
@@ -941,11 +987,11 @@ Header Menu
 	margin: 0 0 1.5em;
 }
 
-.byline,
 .updated:not(.published) {
 	display: none;
 }
 
+.byline,
 .single .byline,
 .group-blog .byline {
 	display: inline;
@@ -1151,50 +1197,10 @@ object {
 	z-index: 2;
 }
 
-/* Debugger styles - used to show the effect
-  --------------------------------------------- */
-.debug {
-	position: fixed;
-	bottom: 0;
-	left: .5em;
-	z-index: 999;
-	background: rgba(0, 0, 0, 0.85);
-	color: #fff;
-	padding: .5em;
-	border-radius: 5px 5px 0px 0px;
-}
-
-.debug-on .parallax__group {
-	-webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
-	transform: translate3d(700px, 0, -800px) rotateY(30deg);
-}
-
-.debug-on .footer__group {
-	-webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
-	transform: translate3d(700px, 0, -800px) rotateY(30deg);
-}
-
-.debug-on .parallax__layer {
-	box-shadow: 0 0 0 2px #000;
-	opacity: 0.9;
-}
-
 .parallax__group {
 	transition: -webkit-transform 0.75s;
 	transition: transform 0.75s;
 	transition: transform 0.75s, -webkit-transform 0.75s;
-}
-
-/* demo styles
-  --------------------------------------------- */
-body,
-html {
-	overflow: hidden;
-}
-
-* {
-	margin: 0;
-	padding: 0;
 }
 
 .parallax {
@@ -1289,7 +1295,7 @@ html {
 }
 
 #group3 .parallax__layer--base {
-	background: #a5a5af;
+	background: #ecf4ff;
 }
 
 #group4 {
